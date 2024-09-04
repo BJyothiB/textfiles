@@ -1,0 +1,185 @@
+
+Find:
+
+The find command is one of the most useful Linux commands, especially when we face with the hundreds and thousands of files and folders.
+find helps you find things, and not just by filename.
+find can help you locate important data.
+
+1. Find a single file by name
+
+find -type -name test.txt
+
+2.find directory:
+find -type d
+
+3.find files with extention txt
+find -name  "*txt"
+
+4.to find files
+find -type f 
+
+5. to find empty files
+find  -type f -empty
+
+6.Find everything
+
+find  -ls
+
+
+User@GOKUL-BODKE-PC ~
+$ find -ls
+48976645947754024      4 drwxr-xr-x   1 User     User            0 Jul 14 06:27 .
+51791395714860645      8 -rwxr-xr-x   1 User     User         5645 Jul 11 10:59 ./.bashrc
+10977524092052695      4 -rw-------   1 User     User         1281 Jul 14 06:30 ./.bash_history
+ 2251799814865393      4 -rwxr-xr-x   1 User     User         1494 Jul 11 10:59 ./.bash_profile
+10414574138631343     12 -rw-r--r--   1 User     User        12288 Jul 11 11:27 ./.file.txt.swp
+ 2251799814865395      4 -rwxr-xr-x   1 User     User         1919 Jul 11 10:59 ./.inputrc
+ 1970324838154740      4 -rwxr-xr-x   1 User     User         1236 Jul 11 10:59 ./.profile
+18858823439932544     12 -rw-------   1 User     User        12288 Jul 13 04:39 ./.swo
+11540474045459077     12 -rw-------   1 User     User        12288 Jul 13 04:35 ./.swp
+12947848929027228      1 -rwxrwxrwx   1 User     User          118 Jul 11 12:08 ./file.txt
+131448814123891227      0 drwxr-xr-x   1 User     User            0 Jul 14 06:28 ./jyothi
+ 18295873486525591      1 -rw-r--r--   1 User     User           68 Jul 14 06:28 ./jyothi/test.txt
+ 11258999068763248      0 drwxr-xr-x   1 User     User            0 Jul 11 11:17 ./sample
+  7036874418655097      1 -rwxrwxrwx   1 User     User          142 Jul 13 04:43 ./sample.txt
+ 23925373020741498      0 -rw-r--r--   1 User     User            0 Jul 13 04:41 ./samples.txt
+ 15199648742712693      1 -rw-r--r--   1 User     User           24 Jul 11 12:18 ./test.txt
+ 10977524092052594      0 drwxr-xr-x   1 User     User            0 Jul 11 11:17 ./testing
+  3096224744990543      0 drwxr-xr-x   1 User     User            0 Jul 11 11:00 ./UxixTraining
+
+
+
+
+
+Grep:  
+
+
+In Unix we use the word 'grep'. 
+'grep' is a contraction of 'global/regular expression/print', a common sequence of operations in early Unix text editors.
+It is also the name of a very useful command-line program 
+
+Grep, short for “global regular expression print”, is a command used for searching and matching text patterns in files contained in the regular expressions.
+
+1. Case insensitive search
+The -i option enables to search for a string case insensitively in the given file. It matches the words like “UNIX”, “Unix”, “unix”. 
+grep -i "UNix" file.txt
+
+2. Displaying the Count of Number of Matches Using grep
+We can find the number of lines that matches the given string/pattern 
+
+grep -c "unix" file.txt
+
+3. Display the File Names that Matches the Pattern Using grep
+We can just display the files that contains the given string/pattern. 
+
+grep -l "unix" *
+
+4. Checking for the Whole Words in a File Using grep
+By default, grep matches the given string/pattern even if it is found as a substring in a file. The -w option to grep makes it match only the whole words. 
+
+grep -w "unix" file.txt
+
+5. Displaying only the matched pattern Using grep
+By default, grep displays the entire line which has the matched string. We can make the grep to display only the matched string by using the -o option. 
+
+grep -o "unix" file.txt
+
+
+
+6. Show Line Number While Displaying the Output Using grep -n
+To show the line number of file with the line matched. 
+
+
+$ grep -n "can" sample.txt
+2:using cat command we can see hte content of the file
+3:after inserting data into the file we can exit using ctrl+d command
+
+
+
+7. Inverting the Pattern Match Using grep
+we can display the lines that are not matched with the specified search string pattern using the -v option. 
+
+User@GOKUL-BODKE-PC ~
+$ grep -v "8" test.txt
+12
+3
+5
+5
+6
+7
+6
+5
+
+
+8. Matching the Lines that Start with a String Using grep
+The ^ regular expression pattern specifies the start of a line. This can be used in grep to match the lines which start with the given string or pattern. 
+
+User@GOKUL-BODKE-PC ~
+$ grep "^this" sample.txt
+this for cat command
+
+9. Matching the Lines that End with a String Using grep
+The $ regular expression pattern specifies the end of a line. This can be used in grep to match the lines which end with the given string or pattern. 
+
+grep "os$" file.txt
+
+10.Specifies expression with -e option
+Can use multiple times : 
+
+grep –e "As" –e "As" –e "As" file.txt
+As
+As
+As
+
+
+11. -f file option Takes patterns from file, one per line
+cat pattern.txt
+
+grep –f pattern.txt  file.txt
+
+
+12. Print n Specific Lines from a File Using grep
+-A prints the searched line and n lines after the result, -B prints the searched line and n lines before the result
+ and -C prints the searched line and n lines after and before the result. 
+
+Syntax:
+
+grep -A[NumberOfLines(n)] [search] [file]  
+
+grep -B[NumberOfLines(n)] [search] [file]  
+
+grep -C[NumberOfLines(n)] [search] [file]  
+
+
+Example:
+
+grep -A1 learn file.txt
+
+
+Output:  
+
+Print n specific lines from a file 
+Print n specific lines from a file
+
+13. Search Recursively for a Pattern in the Directory
+-R prints the searched pattern in the given directory recursively in all the files.
+
+Syntax:
+
+grep -R [Search] [directory]
+
+
+ Example :
+
+grep -iR file /home/test
+
+
+Output:
+
+./file2.txt:Well Hello all
+./file1.txt: big time 
+----------------------------------
+-i to search for a string case insensitively
+-R to recursively check all the files in the directory.
+
+

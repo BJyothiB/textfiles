@@ -1,0 +1,142 @@
+1.    Stack: is a data structure eith allowes LIFO(last in first out) order to retrieve the elements.
+Stack - Last in First Out
+  peek() - retrives the value from queue but dont remove from the queue
+  pop() - retriew and remove.
+  
+  
+  Queue: maintains FIFO order
+  Queue - First in First Out
+   peek() - retrivew the value from queue but dont remove from the queue
+  poll ()- retriew and remove the value.
+  
+  
+  single linkedlist:
+ LinkedList class can contain duplicate elements.
+LinkedList class maintains insertion order.
+ LinkedList class is non synchronized.
+ Java LinkedList class, manipulation is fast because no shifting needs to occur.
+ LinkedList class can be used as a list, stack or queue.
+ 
+ doubly linked list, we can add or remove elements from both sides.
+ removeFirst,removeLast ,remove the First occurenses.
+ 
+ 3.List is a interface 
+ List maintains the insertion order 
+  List is not a sorted collection.
+  List allows duplicate value.
+  List allows Null value
+   List - Collections stores heterogenous Data
+  -insert value -using add
+ - retrieve value - using get 
+  will it remove after get? - dont have pop and poll
+ We can add data to a specific location using the index
+ 
+	List maintains the insertion order
+	List is not a sorted collection.
+	List allows duplicate value.
+	List allows Null value
+	ListIterator, we can iterate the list in forward and backward directions. 
+	The implementation classes of List interface are ArrayList, LinkedList, Stack and Vector.
+	
+	
+4. 
+Array																ArrayList
+array is fixed size, has a contiguous memory location with same datatypes.			                 
+													The ArrayList is a class of Java Collections framework.
+Static/ Dynamic	Array is static in size.						          ArrayList is dynamic in size.ArrayList is a variable-length data structure. It can be resized itself 		
+An array can store both objects and primitives type.cannot store primitive type in ArrayList.     It automatically converts primitive type to  use for loop or for each loop to iterate over an array.					                                              	We cannot use generics along with array because it is not a convertible type of array.	ArrayList allows us to store only generic/ type, that's why it is type-safe.
+Array provides  the length of an array.	                                                          ArrayList provides the size() method to determine the size of ArrayList.
+We can add elements in an array by using the assignment operator.	              		   add() method to add elements in the ArrayList.
+                                                                                                   uses iterator to iterate ArrayList.
+Array can be multi-dimensional.	                                                                    ArrayList is always single-dimensional.
+ 
+ 5.ArrayList                                                                                                     LinkedList
+ The ArrayList is a class of Java Collections framework.                                                maintains the insertion order
+ ArrayList is dynamic in size                                                                           can contain duplicate elements.
+It automatically converts primitive type to  use for loop                                               List allows Null value
+ArrayList provides the size() method                                                                    manipulation is fast because no shifting needs to occur.
+add() method to add elements in the ArrayList                                                           ListIterator, we can iterate the list in forward and backward directions. 
+uses iterator to iterate ArrayList.
+
+6. collection.
+
+The collection framework contains multiple interfaces where every interface is used to store a specific type of data. 
+The following are the interfaces present in the framework. 
+
+1. Iterable Interface
+This is the root interface for the entire collection framework. The collection interface extends the iterable interface.
+
+ this interface contains only one abstract method which is the iterator
+ Iterator iterator() //abstract method
+ 
+2.  Collection Interface
+This interface extends the iterable interface and is implemented by all the classes in the collection framework
+
+3.  List Interface
+This is a child interface of the collection interface.
+ ArrayList,LinkedList,stack,vector clases 
+ 
+4. Queue Interface: FIFO order
+There are various classes like PriorityQueue, ArrayDeque
+
+Priority Queue
+A PriorityQueue is used when the objects are supposed to be processed based on priority.
+ It is known that a queue follows the First-In-First-Out  
+ but sometimes the elements of the queue are needed to be processed according to the priority 
+ The PriorityQueue is based on the priority heap. 
+ The elements of the priority queue are ordered according to the natural ordering, 
+ or by a Comparator provided at queue construction time, depending on which constructor is used. 
+ 
+ Deque Interface
+This is a very slight variation of the queue data structure.
+Deque, also known as a double-ended queue, is a data structure where we can add and remove elements from both ends of the queue.
+
+The class which implements the deque interface is ArrayDeque. 
+
+ArrayDeque
+
+ArrayDeque class which is implemented in the collection framework provides us with a way to apply resizable array. 
+This is a special kind of array that grows and allows users to add or remove an element from both sides of the queue
+
+
+Set Interface
+A set is an unordered collection of objects in which duplicate values cannot be stored. 
+
+Set<T> hs = new HashSet<> (); 
+Set<T> lhs = new LinkedHashSet<> (); 
+Set<T> ts = new TreeSet<> (); 
+Where T is the type of the object. 
+
+ HashSet
+The HashSet class is an inherent implementation of the hash table data structure
+ 
+ LinkedHashSet
+A LinkedHashSet is very similar to a HashSet. The difference is that this uses a doubly linked list to store the data and retains the ordering of the elements.
+ Sorted Set Interface
+This interface is very similar to the set interface
+
+SortedSet<T> ts = new TreeSet<> (); 
+
+TreeSet
+The TreeSet class uses a Tree for storage
+
+Map Interface
+A map is a data structure that supports the key-value pair for mapping the data. 
+Map<T> hm = new HashMap<> (); 
+Map<T> tm = new TreeMap<> ();
+
+HashMap
+HashMap provides the basic implementation of the Map interface of Java. 
+It stores the data in (Key, Value) pairs. To access a value in a HashMap, we must know its key. HashMap uses a technique called Hashing
+ 
+ 
+ 8.how to check whether the list is empty or not in java collections
+ The isEmpty() of java. util. Collection interface is used to check if the Collection is empty or not.
+ This method does not take any parameter and does not returns any value
+ 
+ 9. how to get number of elements in list java
+ List interface provides the size() method to retrieve the number of elements in a List
+ 
+ linked list peek and poll methods
+ peek() method retrieves the first element of a list
+ poll() method retrieves and removes the first element of a list.

@@ -1,0 +1,14 @@
+
+
+cucumber is BDD 
+Written in Gherkin language
+
+we have 
+Featurefile --we write features scenarios
+
+StepDefinition --to convert into java code steps
+
+Runnerclass--- @RunWith
+		@CucumberOptions(feature 
+				glue 
+				plugin

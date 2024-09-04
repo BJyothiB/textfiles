@@ -1,0 +1,30 @@
+Abstraction:
+ Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+ There are two ways to achieve abstraction in java.
+ 
+  Abstract class is a class where we add Abstract keyword to the method 
+ abstract class has abstract methods and  concrete methods.
+ abstract methods has only declaration in abstract class and we do implementation in childclass
+
+Abstract class (0 to 100%)
+Interface
+
+Abstract class:
+A class which is declared as abstract is known as an abstract class.(we add abstract keyword to the method)
+ It can have abstract and concrete (non-abstract) methods.
+  we cann't create object of the class.
+ It needs to be extended and its method implemented.
+ 
+ 
+Interface: 
+interface has only abstract methods.
+we can achieve 100% abstraction using Interface.
+child class implements interface
+
+Exception Handling:
+Exception is an error occurs during the execution of a program.we handle the exceptions in exception handling using Try-catch block.
+
+exceptions are user defined and build in Exceptions.
+in build in Exceptions we have  
+1. checked or compile time exceptions. ex:IOException
+2.unchecked Exceptions or Runtime Exceptions  ex: Arithmetic Exception,ArrayIndex outof bound Exception

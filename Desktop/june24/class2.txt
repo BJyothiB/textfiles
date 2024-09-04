@@ -1,0 +1,167 @@
+ 
+ 1.   Static and NonStatic keyword
+ we can use static keyword to variables ,methods,blocks.
+ if we give static keyword to the variable then we can access the variable without creating the object of that class
+ 
+  ex: static College Name ="AGG";
+  
+  static method is static keyword with method name
+  static keyword with any method, it is known as static method.
+  
+  static void add()
+  {
+  }
+  we can invoke static method without instanciating the class
+  
+  A static method belongs to the class rather than the object of a class.
+A static method can be invoked without the need for creating an instance of a class.
+A static method can access static data member(variable) and can change the value of it.
+
+Non static method :
+ex: public void multiply()
+
+to access the method we need to create object of the class.
+
+public  void multiply(int a,int b) {
+		System.out.println(a*b);
+		
+	}
+	public static void main(String[] args) {
+		
+		StaticExample se =new StaticExample();
+	
+			System.out.println("\nThe product of two numbers is:");
+				se.multiply(3,7);
+				}
+				
+2.	Strings	 string is a class which has Sequence of characters.
+
+ String str =  "Advanced Java"	
+Strings are immutable means we cann't modify it.
+
+String s= "welcome";//literal way
+s=s.concat("java");
+system.out.println(s);
+
+Each time you create a string literal, the values stored in string constant pool. If the string already exists in the pool, a reference to the pooled instance is returned.
+
+
+StringBuffer, Stringbuilder to make strings mutable we have to use Stringbuffer and string builder classes.
+
+
+String name  = "Apple";
+StringBuffer sb= new StringBuffer();
+system.out.println(sb.name);
+
+String class provides methods to perform operations on strings such as compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.
+
+3.  Inheritance in Java is a mechanism where childclass  acquires all the properties and behaviors of a parentclass.
+
+class childClass extends parent{
+
+public void play(){
+system.out.println("playing the basketball");
+}
+public static void main(String []args){
+parent p =new childClass();
+b.play();
+}
+}
+
+4.    Method overloading:  If a class has same method with different type of parameters then it is called method overloading.
+There are two ways to overload the method in java
+By changing number of arguments
+By changing the data type
+
+public void add(int i,int j);
+public void add(int i,int j,int k);
+public void add(float i,float j);
+
+method overriding: If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in Java.
+
+class Vehicle{  
+  //defining a method  
+  void run(){System.out.println("Vehicle is running");}  
+}  
+//Creating a child class  
+class Bike2 extends Vehicle{  
+  //defining the same method as in the parent class  
+  void run(){System.out.println("Bike is running safely");}  
+  
+  public static void main(String args[]){  
+  Bike2 obj = new Bike2();//creating object  
+  obj.run();//calling method  
+  }  
+}  
+
+5. Multilevel Inheritence: When there is a chain of inheritance, it is known as multilevel inheritance.
+childclass is extended by parentclass then grandchildclass is extended by childclass then it is called multilevel inheritance.
+
+
+class parentclass{
+
+public void play(){
+
+system.out.println("playing football");
+}
+childclass extends perentclass
+{
+}
+grandchildclass extends childclass{
+
+childclass cc =new childclass();
+cc.play();
+}
+
+
+
+************************************************************************
+
+ Encapsulation:
+ encapsulation is a process of  wrapping the data members and methods together. In this we make data members as private.
+ to call the datamembers we use set and get methods.
+ 
+ ex: bank employee acc. no.
+ 
+ Abstraction:
+ Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+ There are two ways to achieve abstraction in java.
+ 
+  
+ abstract class has abstract methods and  concrete methods.
+ Abstract class is a class where we add Abstract keyword to the method 
+ abstract methods has only declaration in abstract class and we do implementation in childclass
+ 
+ 
+ 
+
+Abstract class (0 to 100%)
+ 
+
+Abstract class:
+A class which is declared as abstract is known as an abstract class.(we add abstract keyword to the method)
+ It can have abstract and non-abstract methods.
+ It needs to be extended and its method implemented. It cannot be instantiated.
+ 
+ 
+Interface: 
+interface has only abstract methods
+we can achieve 100% abstraction using Interface.
+child class implements interface
+
+ 
+ Inheritence is a process of acquiring property from one class to another class.(inheriting the properties from one class to another class)
+ the class who's properties are extended is base class or parent class.
+ the class who inherits the property is child class.
+ inheritence reprents is -a  relationship  (coder is a employee)
+ inheritence supports reusability.
+ 
+ polymorphism in java allows same entity (method )perform different operations in different scenarios.
+ polymorphism achieved using method overloading and method overriding.
+ in method overloading  same method is overloaded with defferent no. of arguments.
+ in method overriding same method is overridden in parent class and childclass.
+ 
+ 
+ 
+ 
+ 

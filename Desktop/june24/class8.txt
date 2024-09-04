@@ -1,0 +1,69 @@
+File I/0
+
+File reader: FileReader class is used to read data from the file.
+
+//1. Define the path of the file
+String filepath ="C:\\AdvancedJava\\collections\\myfile.txt";
+
+2.Read the file as a Object
+FileReader filereader =new FileReader(filepath);
+
+3. Read this file line by line
+BufferedReader bufferedReader = new BufferedReader(filereader);
+
+		String str;
+
+		while ((str=bufferedReader.readLine()) != null) {
+			System.out.println(str);
+		}
+
+
+file Writer:
+
+ 1. Define the path of the file
+ String filepath ="C:\\AdvancedJava\\collections\\myfile.txt";
+ 
+  2. Write the file as a Object
+	FileWriter filewriter = new FileWriter(filepath);
+	
+ 3. Read this file line by line
+	BufferedWriter bufferedWriter = new BufferedWriter(filewriter);
+	
+4.. Write line by line
+		bufferedWriter.write("Welcome to Java Advance");
+		bufferedWriter.write("\n");
+		bufferedWriter.write("Second Line");
+		bufferedWriter.close();
+		
+		
+properties file: a files contains key,values pairs 
+
+ 1.path of the file to be read the properties file
+ String filepath ="C:\\AdvancedJava\\collections\\files\\application.properties";
+ 
+2.Load this filepath to file Object
+		FileInputStream fileinput = new FileInputStream(filepath);
+		
+3.Create the Object of Properties file
+		Properties prop = new Properties();
+		prop.load(fileinput);
+		
+		System.out.println(prop.get("password"));
+		
+		
+		
+---------------------------------------------------------------------------------		
+++num, num++ difference
+
+num++   post increment
+++num   pre increment
+
+
+int num =7;
+
+num++   //fetch the value then increments
+syso is 7 then increments
+
+++num  //first increment then fetches the value
+
+system.out.println(++num);  //8 is the value;

@@ -1,0 +1,181 @@
+
+Selenium locators:
+
+/*   Automation 
+	 *  - Test Case - Sequence of steps - Manual and Automation 
+	 *  - Input data and Out Data 
+	 *  - WebElement - locators 
+	 *  
+	 *   textBox - sendKeys
+	 *   Button  - click
+	 *   checkbox - click 
+	 *   links - click 
+	 *   label - verify                                                   
+													
+	 *   drop down
+	 *   images
+	 *   radio button 
+	 *   download
+	 *   upload
+	 *   date and time
+	 *   Alerts 
+	 * 
+	 */
+
+	/*     xpath 
+	 *         Absolute xpath  /html/body/input[2]
+	 *         Relative xpath  //tagName[@attribute='value']
+	 *         
+	 *         //input[@id='password']
+	 *         //a[@href='/secur/forgotpassword.jsp?locale=us']
+	 *         //a[@id='forgot_password_link']
+	 *         
+	 *         //tagname[text()='value']
+	 *         //tagName[contains(text(),'value')]
+	 *         //p[text()='Not a customer?']
+	 *         //div[contains(text(),'2024')]
+	 *         
+	 *         
+	 */
+	
+
+
+
+
+
+Selenium 
+ *      - creating driver instance 
+ *          Webdriver driver = new Chromedriver();
+ *      - launch the url
+ *          driver.get()
+ *      - find the element 
+ *           driver.findElement(by.id());
+ *      -Return type Weblement
+ *      -  actions
+ *             - enter the value - SendKeys()
+ *             - clicking - click()
+ *             
+ *      get, findElements , sendkeys and click
+
+
+	/*  1. Alerts 
+	 *      - driver.switchto.alert 
+	 *               - accept 
+	 *               -dismiss
+	 *               -sendkeys
+	 *               
+	 *   2.Windows and Tabs
+	 *        - driver.switchto.window
+	 *               - window handle
+	 *          windowhandle
+	 *          windowhandles - SET 
+	 *          if you loop through this you get which ever handle you need 
+	 *          
+	 *           
+	 *   3. Frame 
+	 *        driver.swithto.frame
+	 *               - index
+	 *               - name
+	 *               -WebELement 
+	 *               
+	 *   4.Get the title of the page 
+	 *        driver.getTitle ();
+	 
+	 
+	 * 
+	 * 
+	 * 
+	 */
+	
+
+Basic Methods to Handle Alerts & Popups in Selenium
+There are multiple methods available in Selenium that can enable us to automate tests based on alerts and popups. For accessing the alerts, we have to first switch the driver context to the alert using the switchTo().alert() method. Let us discuss in details some of the methods of the Alert interface −
+
+driver.switchTo().alert().accept() − This is used to accept an alert by clicking on the Ok button appearing on an alert.
+driver.switchTo().alert().dismiss() − This is used to dismiss an alert by clicking on the Cancel button appearing on an alert.
+driver.switchTo().alert().getText() − This is used to get the text appearing on an alert.
+driver.switchTo().alert().sendKeys("value to be entered") − This is used to enter some text appearing on an input text appearing on an alert.
+
+file Upload
+
+public class FilesUpload {
+   public static void main(String[] args) throws InterruptedException {
+
+      // Initiate the Webdriver
+      WebDriver driver = new ChromeDriver();
+
+      // adding implicit wait of 15 secs
+      driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+      // Opening the webpage where we will upload a file
+      driver.get("https://www.tutorialspoint.com/selenium/practice/upload-download.php");
+
+      // identify element with xpath for file upload
+      WebElement m = driver.findElement(By.xpath("//*[@id='uploadFile']"));
+
+      // getting file path to be uploaded
+      File f = new File("./Picture.png");
+      System.out.println("Getting the file path to be uploaded: " + f.getAbsolutePath());
+
+      // uploading file with path of file uploaded
+      m.sendKeys(f.getAbsolutePath());
+
+      // check if file uploaded successfully
+      if (m.getAttribute("value").equalsIgnoreCase("Picture.png")) {
+         System.out.println("File uploaded successfully ");
+      } else {
+         System.out.println("File uploaded unsuccessfully ");
+      }
+
+      // Closing browser
+      driver.quit();
+   }
+}
+
+
+
+windowhandles
+
+
+
+public class Tabs {
+   public static void main(String[] args) throws InterruptedException {
+
+      // Initiate the Webdriver
+      WebDriver driver = new ChromeDriver();
+
+      // adding implicit wait of 12 secs
+      driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+
+      // Opening the webpage where we will open a new tab
+      driver.get("https://www.tutorialspoint.com/selenium/practice/browser-windows.php");
+
+      // click link and navigate to next tab
+      WebElement b = driver.findElement
+         (By.xpath("/html/body/main/div/div/div[2]/button[1]"));
+      b.click();
+      
+      // Get the window handle of the original window
+      String oW = driver.getWindowHandle();
+      
+      // get all opened windows handle ids
+      Set<String> windows = driver.getWindowHandles();
+
+      // Iterating through all window handles
+      for (String w : windows) {
+         if(!oW.equalsIgnoreCase(w)) {
+         
+            // switching to child tab
+            driver.switchTo().window(w);
+            
+            // accessing element in new tab
+            WebElement e = driver.findElement
+               (By.xpath("/html/body/main/div/div/h1"));
+            System.out.println("Text in new tab is: " + e.getText());
+            break;
+         }
+      }
+      
+      // quitting the browser
+      driver.quit();
+   }

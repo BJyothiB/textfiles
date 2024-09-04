@@ -1,0 +1,130 @@
+
+
+1.  Main method syntax is
+
+public static void main(String[] args)
+{
+}
+
+Actual code execution starts from the main method
+
+
+2.  Shortcuts for main method is 
+
+ctrl+space
+
+system.out.println();
+
+shortcut for this is    syso+ctrl+space
+
+3.   If else conditional statement
+
+The if-else statement tests the condition. It executes the if block if condition is true otherwise else block is executed.
+
+4. loops
+
+for loop,while loop,do-while loop
+
+The  for loop is used to iterate a part of the program several times. The Java for loop is used to iterate a part of the program fixed number of times.
+If the number of iteration is not fixed, we use while or do-while for loop.
+
+for(int i=0;i<5;i++) //initialization,condition,increment/decrementation
+
+5. switch case
+The Java switch statement executes one statement from multiple conditions. 
+
+public class SwitchCaseExample {  
+public static void main(String[] args) {  
+    //Declaring a variable for switch expression  
+    int number=20;  
+    //Switch expression  
+    switch(number){  
+    //Case statements  
+    case 10: System.out.println("10");  
+    break;  
+    case 20: System.out.println("20");  
+    break;  
+    case 30: System.out.println("30");  
+    break;  
+    //Default case statement  
+    default:System.out.println("Not in 10, 20 or 30");  
+    }  
+}  
+} 
+
+6.JDK 
+The Java Development Kit (JDK) is a software development environment which is used to develop Java applications. It contains JRE + development tools.
+The JDK contains a private Java Virtual Machine (JVM) and a few other resources such as an interpreter/loader (java), a compiler (javac), jarfiles.
+
+JRE -Java Runtime Environment
+ The Java Runtime Environment is a set of software tools which are used for developing Java applications.
+ It contains a set of libraries + other files that JVM uses at runtime.
+ 
+7. Arrays 
+An array is a collection of similar datatype of elements which has contiguous(/sequence of) memory location.
+
+int []arr =new int[]arr;
+int [] array;
+array = new int[10]  or
+int []arr1 = new int[10];
+literal way is      int []array = new[] array{2,5,7,8,4,9};
+
+class TestArray{  
+public static void main(String args[]){  
+int a[]=new int[5];//declaration and instantiation  
+a[0]=10;//initialization  
+a[1]=20;  
+a[2]=70;  
+a[3]=40;  
+a[4]=50;  
+//traversing array  
+for(int i=0;i<a.length;i++)//till the length of array  
+System.out.println(a[i]);  
+}} 
+
+8. premitive
+Java provides the mechanism to convert premitive into object. 
+
+int,float,char,boolean,short,long,double,byte 
+
+
+//Autoboxing example of int to Integer  
+public class WrapperExample1{  
+public static void main(String args[]){  
+//Converting int into Integer  
+int a=20;  
+Integer i=Integer.valueOf(a);//converting int into Integer explicitly  
+Integer j=a;//autoboxing, now compiler will write Integer.valueOf(a) internally  
+  
+System.out.println(a+" "+i+" "+j);  
+}}  
+
+
+Wrapper class :  Java provides the mechanism to convert object into premitive.
+ 
+Integer,Float,Character,Double,Long,Boolean,Short,Byte
+
+Integer a=new Integer(3);    
+	int i=a.intValue();//converting Integer to int explicitly  
+	int j=a;//unboxing
+	    
+	System.out.println(a+"  "+i+"  "+j); 
+	
+	
+9.Boxing and Unboxing
+
+
+The automatic conversion of primitive data type into its corresponding wrapper class is known as autoboxing or boxing.
+example byte to Byte, char to Character, int to Integer, long to Long, float to Float, boolean to Boolean, double to Double, and short to Short.
+
+converting premitive to javaobject is called boxing(int to Integer)
+
+converting java object to premitive is called Unboxing(Integer to int)
+
+
+
+
+
+
+
+

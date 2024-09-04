@@ -1,0 +1,84 @@
+
+Unix Interview Q
+
+1.Write a command that will display files in the current directory, in a colored, long format.
+
+ ls -1-color a correct command that will display files in the current directory, in a colored, long format. The ls -l command in Linux The ls command displays only the files.
+ 
+ User@GOKUL-BODKE-PC ~
+$ ls -1 -color
+total 3
+drwxr-xr-x 1 User   0 Jul 11 11:17 testing
+-rw-r--r-- 1 User  24 Jul 11 12:18 test.txt
+-rw-r--r-- 1 User   0 Jul 13 04:41 samples.txt
+-rwxrwxrwx 1 User 142 Jul 13 04:44 sample.txt
+drwxr-xr-x 1 User   0 Jul 11 11:17 sample
+drwxr-xr-x 1 User   0 Jul 14 06:28 jyothi
+-rwxrwxrwx 1 User 118 Jul 11 12:08 file.txt
+drwxr-xr-x 1 User   0 Jul 11 11:00 UxixTraining
+
+2.What is wild-card interpretation?
+
+Wild cards are a way of specifying one or more files using a pattern.
+When we type in a command the shell will search for the characters '*', '? ', '{', '~' and '[' in each word of the command and its arguments.
+
+$ grep -c "the" sample.txt
+2
+
+$ grep -c [^c] sample.txt   //characters starts with c
+3
+
+3.What is inode?
+
+An inode is a file data structure that stores information about any Linux file except its name and data. 
+
+Data is stored on your disk in the form of fixed-size blocks. If you save a file that exceeds a standard block, your computer will find the next available segment on which to store the rest of your file. Over time, that can get super confusing.
+
+That’s where inodes come in. While they don’t contain any of the file’s actual data, it stores the file’s metadata, including all the storage blocks on which the file’s data can be found. 
+
+Information contained in an inode:
+
+File size
+Device on which the file is stored 
+User and group IDs associated with the file
+Permissions needed to access the file
+Creation, read, and write timestamps
+Location of the data (though not the filepath)
+Inodes are also independent of filenames. That means you can copy a single file, rename it, and still have it point to the same inode as the original.
+
+
+Use -inum to find files associated with a certain inode. Inversely, use ls-i to get the inode number of a file.
+
+4.How do you determine and set the path in UNIX?
+Use echo $PATH to view your path variables.
+ Use find / -name "filename" –type f print to find the full path to a file.
+ Use export PATH=$PATH:/new/directory to add a new directory to the path.
+ 
+ To find out what your path is, at the Unix shell prompt, enter:
+
+echo $PATH
+Your path will look something like the following.
+
+/usr2/username/bin:/usr/local/bin:/usr/bin:.
+You will see your username in place of username. Using the above example path, if you enter the ls command, your shell will look for the appropriate executable file in the following order: first, it would look through the directory /usr2/username/bin, then /usr/local/bin, then /usr/bin, and finally the local directory, indicated by the . (a period).
+
+To modify your path
+If you are using csh or tcsh, at the shell prompt, enter:
+
+setenv PATH $PATH\:/dir/path
+If you are using sh, ksh, or bash, at the shell prompt, enter:
+
+PATH=$PATH\:/dir/path ; export PATH
+In all cases, replace /dir/path with the directory you want the shell to search.
+
+Note:
+Earlier entries in the path take precedence over later ones. If you want the directories you add to your path to take precedence, in the examples above, replace $PATH\:/dir/path with /dir/path:$PATH.
+To make these changes permanent, add the commands described above to the end of your .cshrc file (for csh and tcsh), .profile file (for sh and ksh), or .bash_profile file (for bash).
+ 
+ 5.What is Bash Shell?
+
+Bash (Bourne-Again Shell) is a command interpreter that interprets commands typed into the terminal.
+ These scripts are actually text files and doesn't required to be compiled. You can also use the commands you use in the terminal in scripts. For example, (pwd, ls, cd etc.).
+ 
+ 
+ 

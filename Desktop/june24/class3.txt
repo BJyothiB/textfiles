@@ -1,0 +1,22 @@
+
+1.    AccessModifiers are public,default,protected and private
+we can make variables and methods public,private,default,protected based on requirement.
+if the method is public we access the method in class,package,subclass and global
+if the method is private we can access only within the class,cann't access in other class,package or global.
+if the method is protected we can access with in the class,package,subclass not globally.
+if the method is default we can access within the class,package,subclass not global.
+
+Super() we use this for parent class.
+
+
+2.  final is a keyword 
+if the variable is declared final then we cann't reassign the value to that.
+if the method is final we cann't overriden it.
+if the class is final we cann't extend it.
+
+
+3.   finally is a block of code which  is used in exception handling 
+in this actual code implementation we write in try block and if there any chance of  occurence of exception  then we catch using catch block.
+whether exception occurs or not the finally block must be called .
+
+4. finalize method is used in Garbage Collection when there is any unused variable or objects then jvm checks and garbage collection done before the finalize method occurs.

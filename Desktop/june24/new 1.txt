@@ -1,0 +1,28 @@
+
+Jnanesh CM (to All - Entire Audience):
+
+10:34 AM: <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+
+
+Jnanesh CM (to All - Entire Audience):
+
+10:34 AM: <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+
+Jnanesh CM (to All - Entire Audience):
+
+10:34 AM: <?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+//*[@id="toolsContent"]/tbody/tr/td[1]/div/div[1]/div[1]/ul/li[2]/a
+//*[@id="home_Tab"]/a
+
+//*[@id="aboutTab"]/a

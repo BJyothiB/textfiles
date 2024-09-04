@@ -1,0 +1,99 @@
+
+TestNG:
+.......
+To automate and run all test cases we use TestNg.
+In TestNg we run Smoke and Regression Tests.
+
+This is the Order for Execution Ig TestNG
+
+@BeforeSuite
+@BeforeTest
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterTest
+@afterSuite
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+If We have 3 Testcases then the execution order is 
+
+@BeforeMethod (Launching the Browswer,initialisizing the driver)
+@Test
+@AfterMethod(close the browser)
+------
+@BeforeMethod
+@Test
+@AfterMethod
+..........
+@BeforeMethod
+@Test
+@AfterMethod
+
+
+we can we one class in one package and other in another package 
+we can run using testNg.xml file
+we get same the result doen't matter which package they reside in.(the output is same.)
+
+
+//TestNg.xml file
+!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="Automation">
+@Beforetest
+<test name ="login"> </test>
+<classes>
+<class name="com.Sautomation.testng.LoginTest"/>
+</classes>
+@AfterTest
+
+
+@BeforeTest
+<test name ="Dashboard"> </test>
+<classes>
+<class name="com.selenium.automation.LoginTest1"/>
+</classes>
+@afterTest
+</suite>
+
+
+
+<parameters   name="username"  value =" abc123@gmail.com"/>
+
+
+@Test(priority =1)  0,1,-1
+
+//if we don't specify priority 0,1,-1 then test methods execute in alphabetic order
+
+
+public class Login {
+@Test(priority = 1)
+public void loginTest() {
+System.out.println("Login successful");
+
+}
+@Test(priority = 2)
+public void registerTest() {
+System.out.println("Register successful");
+}
+
+@Test(priority = 2)
+public void sendEmail() {
+System.out.println("Sent email successfully");
+}
+
+@Test(priority = 3)
+public void logoutTest() {
+System.out.println("Logout successful");
+}
+}
+ 
+https://www.browserstack.com/guide/prioritizing-tests-in-testng-with-selenium ----------->read this 
+
+ can see that the two test methods have the same priority. In such cases, TestNG will execute the test methods with the same priority in alphabetical order, i.e.,
+ TestNG considers the alphabetical order of ‘r’ and ‘s’ and executes them accordingly. Hence, registerTest() was executed before sendEmail().
+
+
+What is a TestNG framework?
+TestNG is a Framework or Tool:
+TestNG is a testing framework for Java that helps in automating tests for your software applications. 
+It allows you to write and organize test cases, execute them efficiently, and generate detailed test reports.

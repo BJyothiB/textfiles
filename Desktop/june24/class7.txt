@@ -1,0 +1,58 @@
+1. difference between Map and set
+
+map
+Map contains Key and value pair
+ *  if we want value we need to get it through the key
+ *  key should never have a duplicate value
+ *  value can be duplicate
+ 
+ set
+  Insertion order is not maintained. - Unordered collection
+ * - We cannot access Set by Index.
+ * - you cannot store duplicate values 
+ *  - Set allow one null value
+ 
+ 2. Hash set Treeset
+ 
+ 
+ Treeset
+  Insertion order is not maintained. - Unordered collection
+ * - We cannot access Set by Index.
+ * - you cannot store duplicate values 
+ *  - treeSet do not allow  null value
+ *  - TreeSet is a sorted Set.
+ 
+ 
+ Hash set
+ The HashSet class is an inherent implementation of the hash table data structure
+  Insertion order is not maintained. - Unordered collection
+ * - We cannot access Set by Index.
+ * - you cannot store duplicate values 
+ *  - Set allow one null value
+ 
+ 
+ 3.Hasmap and Treemap
+ 
+ We access the value through key
+ * hashmap.get(key) to get the value.
+ * key cannot be duplicate
+ * one null key is allowed
+ * values can contain duplicate 
+ * Map is an unordered collection  , however we can access using key
+ * will not main its insertion order
+ 
+ 
+4.When to use HashSet HashMap
+
+HashSet is used to access elements randomly. 
+It is because elements in a hash table are accessed using hash codes. 
+The hashcode of an element is a unique identity that helps to identify the element in a hash table. 
+HashSet cannot contain duplicate elements.
+
+HashMap
+ hash map is used whenever data is stored as key-value pairs, where values can be added, retrieved, and deleted using keys.
+Map contains Key and value pair
+  if we want value we need to get it through the key
+  key should never have a duplicate value
+   value can be duplicate
+ 

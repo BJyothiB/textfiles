@@ -1,0 +1,167 @@
+
+smoke testing (build verification testing)
+we will perform basic functionality of the feature to check is it working properly or not
+We will do the smoke testing to ensure that the product is testable.
+We will perform smoke testing in the beginning and detect the bugs in the basic features and send it to the development team so that the development team will have enough time to fix the bugs.
+We do smoke testing to make sure that the application is installed correctly.
+ex:
+
+Click on item
+Description page should be open.
+
+Click on Add to Cart
+The cart should be open
+Click on Buy Now
+Payment options should be displayed. Choose one of them.
+
+advantages:
+It is a time-saving process.
+In the early stage, we can find the bugs.
+It will help to recover the quality of the system, which decreases the risk.
+It is easy testing to perform because it saves our test effort and time.
+
+
+
+Testplan 
+
+A test plan is a detailed document which describes software testing areas and activities.
+ It outlines the test strategy, objectives, test schedule, required resources (human resources, software, and hardware), test estimation and test deliverables.
+In software development, a test plan defines your testing team’s test strategy, 
+goals, and scope, which ultimately work together to ensure that all your software components are tested sufficiently before a release. 
+
+Follow these six steps to create an efficient test plan:
+
+*Define the release scope
+*Schedule timelines 
+*Define test objectives
+*Determine test deliverables
+*Design the test strategy
+*Plan test environment and test data
+
+1.  Examples of questions to ask when defining the release scope include: 
+
+Are there new features being released in this version? 
+What are the risk areas?
+Are there any particularly sticky areas where you’ve seen regressions in the past?
+What type of release is it? Is this a maintenance release that includes bug fixes? Is this a minor feature release? Is this a major feature release?
+What does being “done” actually look like for your team?
+For example, what information would you require if your organization has just launched a new e-commerce site and wants to test it before it launches?
+
+2. Specify release deadlines to help you decide your testing time and routine. Here are some pointers for determining timelines:
+
+Consult your project manager to understand the current release timeline.
+Look at past release times and schedules.
+Consider extraneous elements: Does the release need to coincide with outside variables, such as conferences or events? Factor those into your release date prediction.
+Consider the timeframes for development: Your development team might have a set schedule for finishing development work.
+ Make sure you comprehend that timeframe so you can adjust the testing schedule.
+Add some extra wiggle room: It’s common to encounter unexpected delays. Including extra time for unforeseen events can help you stick to your plan.
+Review and update the schedule frequently to ensure the test timetable is attainable.  
+
+3. Define test objectives
+A test objective is a reason or purpose for designing and executing a test. These objectives ultimately help guide and define the scope of testing activities.
+
+Examples of general test objectives include:
+
+Identifying and reporting defects
+Testing new features
+A certain level of test coverage
+
+Measure testing with the right metrics
+*Metrics assess the overall quality of a release 
+Defect Density
+
+Defect Density = Defect count/size of the release (lines of code)
+Example: If your software has 150 defects and 15,000 lines of code, its defect density is 0.01 defects per line of code.
+Test Coverage
+
+Test Coverage = (Total number of requirements mapped to test cases / Total number of requirements) x 100.
+Defect Detection Efficiency (DDE)
+
+DDE = The percentage of defects detected during a phase / Total number of defects
+Time to Market
+
+TTM = The time it takes for your company to go from idea to product launch
+
+
+4. Determine test deliverables
+Test deliverables are the products of testing that help track testing progress. 
+Deliverables should meet your project’s and client’s needs, be identified early enough to be included in the test plan, and be scheduled accordingly.
+There are different test deliverables at every phase of the software development lifecycle.
+Here are important deliverables to focus on before, during, and after testing:
+
+5. Design the test strategy
+Test strategy helps determine test cost, test effort, and which features will be in-scope (planned to be tested) versus out-of-scope (not planned to be tested).
+
+Examples of factors to consider when choosing the right testing type to perform include:
+
+*Test objectives
+*Your project’s feature requirements
+*The complexity of your product
+*Your team’s experience levels
+*Regulatory requirements
+*Time and budget 
+
+Document risks and issues
+It’s essential to document risks that may occur during testing and the effect of these risks. Risks can include: 
+
+Strict deadlines
+Insufficient or inaccurate budget estimates
+Poor management
+Problems with the code
+Changes in the business environment
+Limited resources for testing
+Unexpected delays during testing
+
+Document test logistics
+Establish test criteria
+Suspension Criteria: Establishes the conditions for suspending all tests.
+Exit Criteria: 
+
+6. Plan the test environment and test data
+Planning a test environment guarantees precise and robust testing. 
+The test environment includes hardware, software, and network configurations for software testing. 
+Follow these procedures to set up the test environment:
+
+
+Defect States Workflow
+The number of states that a defect goes through varies from project to project. Below lifecycle diagram, covers all possible states
+
+New: When a new defect is logged and posted for the first time. It is assigned a status as NEW.
+Assigned: Once the bug is posted by the tester, the lead of the tester approves the bug and assigns the bug to the developer team
+Open: The developer starts analyzing and works on the defect fix
+Fixed: When a developer makes a necessary code change and verifies the change, he or she can make bug status as “Fixed.”
+Pending retest: Once the defect is fixed the developer gives a particular code for retesting the code to the tester. Since the software testing remains pending from the testers end, the status assigned is “pending retest.”
+Retest: Tester does the retesting of the code at this stage to check whether the defect is fixed by the developer or not and changes the status to “Re-test.”
+
+Verified: The tester re-tests the bug after it got fixed by the developer. 
+If there is no bug detected in the software, then the bug is fixed and the status assigned is “verified.”
+Reopen: If the bug persists even after the developer has fixed the bug, the tester changes the status to “reopened”. 
+Once again the bug goes through the life cycle.
+Closed: If the bug is no longer exists then tester assigns the status “Closed.” 
+Duplicate: If the defect is repeated twice or the defect corresponds to the same concept of the bug, the status is changed to “duplicate.”
+Rejected: If the developer feels the defect is not a genuine defect then it changes the defect to “rejected.”
+Deferred: If the present bug is not of a prime priority and if it is expected to get fixed in the next release, then status “Deferred” is assigned to such bugs
+Not a bug: If it does not affect the functionality of the application then the status assigned to a bug is “Not a bug”.
+
+
+defect lifecycle
+
+* Tester finds the defect
+* Status assigned to defect- New
+* A defect is forwarded to Project Manager for analyze
+* Project Manager decides whether a defect is valid
+* Here the defect is not valid- a status is given “Rejected.”
+* So, project manager assigns a status rejected. If the defect is not rejected then the next step is to check whether it is in scope. 
+* Suppose we have another function- email functionality for the same application, and you find a problem with that. But it is not a part of the current release when such defects are assigned as a postponed or deferred status.
+* Next, the manager verifies whether a similar defect was raised earlier. If yes defect is assigned a status duplicate.
+* If no the defect is assigned to the developer who starts fixing the code. During this stage, the defect is assigned a status in- progress.
+* Once the code is fixed. A defect is assigned a status fixed
+* Next, the tester will re-test the code. In case, the Test Case passes the defect is closed. If the test cases fail again, the defect is re-opened and assigned to the developer.
+Consider a situation where during the 1st release of Flight Reservation a defect was found in Fax order that was fixed and assigned a status closed. During the second upgrade release the same defect again re-surfaced. In such cases, a closed defect will be re-opened.
+
+
+
+
+
+
+
